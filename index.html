@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Pawfection Spa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to The Pawfection Spa</h1>
+  </header>
+
+  <section class="registration">
+    <h2>Register to Continue</h2>
+    <form id="registerForm" onsubmit="return showThankYou(event)">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <script>
+    function showThankYou(event) {
+      event.preventDefault();                 // Prevent default form submission
+      window.open("thankyou.html", "_blank"); // Open thank you page in new tab
+      window.location.href = "pawfection.html"; // Then redirect current tab to spa site
+    }
+  </script>
+
+</body>
+</html>

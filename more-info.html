@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Information - Pawfection Spa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>More Information</h1>
+    <p>Explore more about our services</p>
+  </header>
+
+  <section id="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="openTab('book')">Book Appointment</button>
+      <button class="tab-btn" onclick="openTab('hours')">Opening Hours</button>
+      <button class="tab-btn" onclick="openTab('about')">About Us</button>
+    </div>
+
+    <!-- Book Tab -->
+    <div id="book" class="tab-content active">
+      <h3>Book an Appointment</h3>
+      <form>
+        <label>Name:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Service:</label>
+        <select required>
+          <option>Trimming Hair</option>
+          <option>Bathing</option>
+          <option>Drying</option>
+        </select>
+        <label>Date:</label>
+        <input type="date" required>
+        <label>Time:</label>
+        <input type="time" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Hours Tab -->
+    <div id="hours" class="tab-content">
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 9 AM - 6 PM</p>
+      <p>Saturday: 10 AM - 4 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+    <!-- About Us Tab -->
+    <div id="about" class="tab-content">
+      <h3>About Us</h3>
+      <p>At The Pawfection Spa, we believe every dog deserves pampering. We use top-quality products to ensure your furry friend is happy and refreshed.</p>
+    </div>
+  </section>
+
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
